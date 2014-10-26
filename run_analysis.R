@@ -72,7 +72,7 @@ meltedData <- melt( extractData, id=colnames(extractData)[1:2], measure.vars=col
 
 avgTidyData <- dcast(meltedData, activityname + subjectidentifier ~ variable, mean)    # mean value of each variable for each activity name and subject identifier
 
-write.table(avgTidyData, file="./tidyData_AvgMeasurementsByActivityAndSubject.txt", row.name=FALSE)
+write.table(avgTidyData, file="./tidyData_AvgMeasuresByActivityAndSubject.txt", row.name=FALSE)
 
 #verify_tidydata <- read.table("./tidyData_AvgMeasurementsByActivityAndSubject.txt", sep="", header=TRUE)  # test only: check tidy data txt file by reading it back into R
 
