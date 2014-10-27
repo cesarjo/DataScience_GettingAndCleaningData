@@ -1,4 +1,4 @@
-### Data Science: Getting and Cleaning Data
+### Data Science Coursera: Getting and Cleaning Data
 ### Course Project
 ### Date: 10-25-2014
 
@@ -6,11 +6,9 @@
 trainData <- read.table("./UCI HAR Dataset/train/X_train.txt", sep="")
 trainAct <- read.table("./UCI HAR Dataset/train/y_train.txt", sep="")
 trainSub <- read.table("./UCI HAR Dataset/train/subject_train.txt", sep="")
-
 testData <- read.table("./UCI HAR Dataset/test/X_test.txt", sep="")
 testAct <- read.table("./UCI HAR Dataset/test/y_test.txt", sep="")
 testSub <- read.table("./UCI HAR Dataset/test/subject_test.txt", sep="")
-
 features <- read.table("./UCI HAR Dataset/features.txt", sep="")
 activity <- read.table("./UCI HAR Dataset/activity_labels.txt", sep="")
 
@@ -69,10 +67,9 @@ if("reshape2" %in% rownames( installed.packages() ) == FALSE) {     # install re
 library(reshape2)
 
 meltedData <- melt( extractData, id=colnames(extractData)[1:2], measure.vars=colnames(extractData)[3:68] ) # melt data by id = activity and subject
-
 avgTidyData <- dcast(meltedData, activityname + subjectidentifier ~ variable, mean)    # mean value of each variable for each activity name and subject identifier
 
+## 6.Write tidy data to txt file
 write.table(avgTidyData, file="./tidyData_AvgMeasuresByActivityAndSubject.txt", row.name=FALSE)
-
 #verify_tidydata <- read.table("./tidyData_AvgMeasurementsByActivityAndSubject.txt", sep="", header=TRUE)  # test only: check tidy data txt file by reading it back into R
 
