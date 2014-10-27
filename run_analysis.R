@@ -12,7 +12,7 @@ testSub <- read.table("./UCI HAR Dataset/test/subject_test.txt", sep="")
 features <- read.table("./UCI HAR Dataset/features.txt", sep="")
 activity <- read.table("./UCI HAR Dataset/activity_labels.txt", sep="")
 
-## 1.Merges the training and the test sets to create one data set.
+## 1.Merge the training and the test sets to create one data set
 colnames(trainData) <- as.character(features$V2)    # replace generic col names with feature names
 colnames(testData) <- as.character(features$V2)     # replace generic col names with feature names
 colnames(trainAct) <- "ActivityLabel"               # replace generic col name with descriptive
@@ -22,12 +22,12 @@ colnames(testSub) <- "SubjectIdentifier"            # replace generic col name w
 
 trainData2 <- cbind(trainAct, trainSub)         # add training subject data to activity data column
 trainData2 <- cbind(trainData2, trainData)      # add training data to previous data, merging all training data
-testData2 <- cbind(testAct, testSub)            # add testing subject data to activity data column
-testData2 <- cbind(testData2, testData)         # add testing data to previous data, merging all testing data
+testData2 <- cbind(testAct, testSub)            # add test subject data to activity data column
+testData2 <- cbind(testData2, testData)         # add test data to previous data, merging all testing data
 
 mergedData <- rbind(trainData2, testData2)      # combine all rows from training and test data
 
-## 2.Extract only measurements on the mean and standard deviation for each measurement. 
+## 2.Extract only measurements on the mean and standard deviation for each measurement
 #sum( grepl( "mean[(][])]", colnames(mergedData) ) )  # total = 33 
 #sum( grepl( "std[(][])]", colnames(mergedData) ) )   # total = 33
 
@@ -44,7 +44,7 @@ for( idx in seq_along(extractDataActivity) ) {
     extractData$mergedData.ActivityLabel[idx] <- activityName[extractDataActivity[idx]]  # overwrite number with activity name
 }
 
-## 4.Appropriately label data set with descriptive variable names. 
+## 4.Appropriately label data set with descriptive variable names
 columnNames <- colnames(extractData)                                # temp vector that holds all column names, will update these names
 columnNames <- tolower(columnNames)                                 # Convert names to lower case
 columnNames <- gsub("-", "", columnNames)                           # Replace dash "-" char with <no space>.
@@ -60,7 +60,7 @@ columnNames <- gsub("mergeddata.subjectidentifier", "subjectidentifier", columnN
 
 colnames(extractData) <- columnNames        # overwrite data frame with new descriptive variable (column) names
 
-## 5.Create a new independent tidy dataset with average of each variable for each activity and each subject.
+## 5.Create a new independent tidy dataset with average of each variable for each activity and each subject
 if("reshape2" %in% rownames( installed.packages() ) == FALSE) {     # install reshape2 package for reshaping into tidy data
     install.packages("reshape2")
 }

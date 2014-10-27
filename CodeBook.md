@@ -5,9 +5,9 @@ Description: CodeBook.md will provide explanation on the variables, that is what
 ---
 Data Science Coursera - Getting and Cleaning Data: Course Project
 
-### General Information about the Tidy Data
+### General Information regarding the Tidy Data Set
 - Tidy data set is contained in a single text file (eg: "tidyData_AvgMeasuresByActivityAndSubject.txt").
-- Tidy data set text file is created by the run_analysis.R script (see README.md for more info about "recipe").
+- Tidy data text file is created by the run_analysis.R script (see README.md for more info about "recipe").
 - Text file consists of the average of each measurement variable for each activity and each subject.
 - The measurement variables in text file are a range of measurements taken from sensor signals (accelerometer and gyroscope) in experiments, that specifically consist of those estimated using mean and standard deviation functions on the data. All other measured data was removed from final data set.
 - Finally the data in text file uses variable and value names that are consistent with "tidy data good practices" convention.

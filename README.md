@@ -5,7 +5,7 @@ Description: README.md file will explain how the run_analysis.R script works. An
 ---
 Data Science Coursera - Getting and Cleaning Data: Course Project
 
-### General Workflow
+### General User Workflow
 1. Download the raw dataset from [here](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip).
 2. Extract all data (.txt) files to "UCI HAR Dataset" directory on the working directory.
 3. Run the run_analysis.R script from working directory.
@@ -69,4 +69,3 @@ Data Science Coursera - Getting and Cleaning Data: Course Project
 - Melt data in data.frame by id = activity and subject.
 - Cast the melted data by activty and subject identifier, and calculating the average of each variable for activity and subject variations.
 - Write the new tidy data table to a .txt file.
-
