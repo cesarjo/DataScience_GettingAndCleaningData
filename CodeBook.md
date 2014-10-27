@@ -1,6 +1,6 @@
 ---
-title: "CodeBook"
-output: html_document
+Title: "CodeBook"
+Output: html_document
 Description: CodeBook.md will provide explanation on the variables, that is what the variables represent (eg the measure, etc).
 ---
 Data Science Coursera - Getting and Cleaning Data: Course Project

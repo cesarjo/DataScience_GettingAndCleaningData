@@ -1,6 +1,6 @@
 ---
-title: "README"
-output: html_document
+Title: "README"
+Output: html_document
 Description: README.md file will explain how the run_analysis.R script works. An overview on how script processes the data in order to obtain the tidy data output. 
 ---
 Data Science Coursera - Getting and Cleaning Data: Course Project
