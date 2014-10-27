@@ -5,7 +5,7 @@ Description: CodeBook.md will provide explanation on the variables, that is what
 ---
 Data Science Coursera - Getting and Cleaning Data: Course Project
 
-### General Information regarding the Tidy Data Set
+### General Information about the Tidy Data Set
 - Tidy data set is contained in a single text file (eg: "tidyData_AvgMeasuresByActivityAndSubject.txt").
 - Tidy data text file is created by the run_analysis.R script (see README.md for more info about "recipe").
 - Text file consists of the average of each measurement variable for each activity and each subject.
