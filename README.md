@@ -20,6 +20,7 @@ Data Science Coursera - Getting and Cleaning Data: Course Project
 - In total 8 text files are used collect all the raw data for creating tidy dataset (see table below).
 
 ###### Text file datasets as corresponding to data.frame dimensions (in R) after read.table() operation:
+|X) |  Text File Name              | Brief Description                      |Table Dimension|
 |---|:-----------------------------|:---------------------------------------|--------------:|
 |1) | 'features.txt'               | List of all features.                  |   561 x 2     |
 |2) | 'activity_labels.txt'        | Links class labels with activity name. |   6 x 2       |
